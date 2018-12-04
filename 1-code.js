@@ -1,20 +1,30 @@
-// Helper function used to convert the 1-input.txt file into an array of strings
+/**
+ * Converts the given string where each line is a new number into an array of numbers.
+ * @param {string} input The 1-input.txt file's content
+ */
 function parseArray(input) {
 	return input
 		// Split every newline
 		.split('\n')
 		// Remove the last one because it will be NaN
-		.splice(-1);
-}
-
-// Takes the array
-// Returns the sum of all the numbers in it
-function partOne(array) {
-	return array
-		// Convert all strings into numbers (and remove the + at the start)
+		.splice(-1)
+		// Convert everything into an array of numbers (remove '+' symbol)
 		.map(x => parseInt(x.replace('+', '')));
 }
 
+/**
+ * Get the sum of all numbers in the array
+ * @param {number[]} array The array of numbers from the input
+ */
+function partOne(array) {
+	// Add them all up
+	return array.reduce((a, b) => a + b);
+}
+
+/**
+ * Keeps adding the numbers from the array until it finds a sum that has been repeated.
+ * @param {number[]} array The array of numbers from the input
+ */
 function partTwo(array) {
 	// A map of every sum that has previously been seen
 	const map = {};
@@ -29,10 +39,10 @@ function partTwo(array) {
 		map[sum] = true;
 		// Add the next number to the current sum
 		sum += array[index];
-
 		// Loop stuff
 		index++;
 		if (index >= array.length) index = 0;
 	}
+
 	return sum;
 }
