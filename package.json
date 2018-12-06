@@ -1,0 +1,16 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My work on the [Advent Of Code 2018](https://adventofcode.com/)'s coding challenges.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PandawanFr/AdventOfCode.git"
+  },
+  "author": "Pandawan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PandawanFr/AdventOfCode/issues"
+  },
+  "homepage": "https://github.com/PandawanFr/AdventOfCode#readme"
+}

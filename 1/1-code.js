@@ -1,4 +1,8 @@
 /**
+ * Note: I did not put any method of connecting the "1-input.txt" file to this code. Just assume that this is run in a simple Console environment or something.
+ */
+
+/**
  * Converts the given string where each line is a new number into an array of numbers.
  * @param {string} input The 1-input.txt file's content
  */
